@@ -2,11 +2,281 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Xi Chen 的个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xi Chen 的个人学术主页">
+  <title>Xi Chen | Academic Homepage</title>
+
+  <style>
+    :root {
+      --blue: #164b93;
+      --light-blue: #3973bd;
+      --line: #aaaaaa;
+      --about-background: #fffef0;
+      --news-background: #e6ffe6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 12px 16px 40px;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    a {
+      color: #004aa5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+
+    /* 顶部姓名 */
+    .site-title {
+      margin: 0;
+      padding-bottom: 5px;
+      border-bottom: 3px double #888888;
+      color: var(--blue);
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .site-title .english-name {
+      font-weight: 700;
+    }
+
+    .site-title .chinese-name {
+      font-weight: 400;
+    }
+
+    /* 个人信息 */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      min-height: 230px;
+      padding: 30px 3px 15px;
+    }
+
+    .portrait {
+      width: 152px;
+      height: 190px;
+      flex: 0 0 auto;
+      object-fit: cover;
+    }
+
+    .profile-text p {
+      margin: 0 0 22px;
+    }
+
+    /* 通用区块 */
+    .section {
+      margin-top: 18px;
+    }
+
+    .section-title {
+      margin: 0 0 13px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--line);
+      color: var(--light-blue);
+      font-size: 23px;
+      line-height: 1.15;
+    }
+
+    .panel {
+      border: 1px solid #c9c9c9;
+      padding: 7px 8px;
+    }
+
+    /* About me */
+    .about-panel {
+      background: var(--about-background);
+    }
+
+    .about-panel p {
+      margin: 0 0 12px;
+    }
+
+    .about-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* News */
+    .news-panel {
+      border: 0;
+      padding: 8px 25px 8px 48px;
+      background: var(--news-background);
+    }
+
+    .news-panel ul {
+      margin: 0;
+      padding-left: 0;
+      list-style-type: square;
+    }
+
+    .news-panel li {
+      margin: 0 0 8px;
+      padding-left: 2px;
+    }
+
+    .news-panel li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 手机端布局 */
+    @media (max-width: 640px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      .site-title {
+        font-size: 26px;
+      }
+
+      .profile {
+        display: block;
+        padding-top: 20px;
+      }
+
+      .portrait {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+      .profile-text p {
+        margin-bottom: 16px;
+      }
+
+      .news-panel {
+        padding: 10px 16px 10px 34px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>欢迎来到我的个人主页</h1>
-  <p>这是我的 GitHub Pages 网站。</p>
+  <main class="page">
+
+    <!-- 姓名 -->
+    <h1 class="site-title">
+      <span class="english-name">Xi Chen</span>
+      <span class="chinese-name">（陈熙）</span>
+    </h1>
+
+    <!-- 个人信息 -->
+    <section class="profile" aria-label="Personal information">
+
+      <!-- profile.jpg 必须与 index.html 放在同一目录 -->
+      <img
+        class="portrait"
+        src="xi.jpg"
+        alt="Portrait of Xi Chen"
+      >
+
+      <div class="profile-text">
+        <p>
+          <a href="#">Xi Chen</a><br>
+          Lecturer,
+          <a href="#">School of Example Engineering</a><br>
+          <a href="#">Example University</a>,
+          Wuxi, China
+        </p>
+
+        <p>
+          Researcher in Artificial Intelligence and Intelligent Systems
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:yourname@example.edu.cn">
+            yourname@example.edu.cn
+          </a>
+          <br>
+
+          <a href="https://scholar.google.com/" target="_blank">
+            Google Scholar
+          </a>
+          <br>
+
+          <a href="https://www.researchgate.net/" target="_blank">
+            ResearchGate
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section class="section" id="about">
+      <h2 class="section-title">About me</h2>
+
+      <div class="panel about-panel">
+        <p>
+          I am currently a lecturer at the School of Example Engineering,
+          Example University. I received my Ph.D. degree in 2025. Before that,
+          I received my B.Eng. degree in 2019. My research focuses on intelligent
+          systems, data-driven control, machine learning, and their applications.
+        </p>
+
+        <p>
+          My main interests are in the areas of artificial intelligence,
+          optimization, data-based control, reinforcement learning, and
+          human-centered intelligent systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section class="section" id="news">
+      <h2 class="section-title">News</h2>
+
+      <div class="panel news-panel">
+        <ul>
+          <li>
+            <strong>October 8th, 2026:</strong>
+            My personal academic homepage is now online.
+          </li>
+
+          <li>
+            <strong>September 1st, 2026:</strong>
+            I began working at Example University.
+          </li>
+
+          <li>
+            <strong>June 30th, 2026:</strong>
+            Our new paper was accepted for publication.
+          </li>
+
+          <li>
+            <strong>May 15th, 2026:</strong>
+            I gave a research seminar on intelligent systems.
+          </li>
+
+          <li>
+            <strong>March 8th, 2026:</strong>
+            A new research project was launched.
+          </li>
+
+          <li>
+            <strong>January 1st, 2026:</strong>
+            Happy New Year!
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
